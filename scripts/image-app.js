@@ -45,7 +45,6 @@
     myWorker.postMessage({'type': type, 'imageData': imageData}); // Send data to our worker.
     myWorker.addEventListener('message', function(e){
         imageData = e.data;
-        console.log(imageData);
         toggleButtonsAbledness();
         ctx.putImageData(imageData, 0, 0);
     });
